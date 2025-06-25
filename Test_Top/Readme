@@ -1,0 +1,30 @@
+1. Ni tao thu 5 cai IP nhung chua lam thanh IP duoc, ko biet sao. 
+Mi lam thu nha. 
+Lam duoc thi file top chi can add 5 cai IP la xong.
+(ip_repo)
+
+
+ChatGPT Huong dan:
+
+Step 4: Register Your IP in Platform Designer
+-Open Platform Designer in Quartus
+-Go to Tools → Options → IP Catalog Search Locations
+-Click Add... and choose the ip_repo/ folder
+-Click Rescan Repositories
+-Now, in the IP list, you’ll see Adder IP (No Avalon) under Custom IP
+
+Step 5: Use Your IP
+-Drag Adder IP (No Avalon) into your Platform Designer system.
+-You'll see a conduit interface with ports a, b, sum.
+-Connect those ports to another component or export them (right-click → Export Signal).
+-Generate the HDL system normally (click Generate HDL).
+-In Quartus, make sure to:
+  -Add the generated HDL files and your VHDL (adder_ip.vhd) to the project.
+
+
+2. Ni tao thu file Top de noi 5 khoi lai voi nhau (top_file/top.vhd)
+
+
+P/S: common/inoutput_types.vhd giong khai bao struct trong C vay ah.
+Moi khi thang Cross Bar thay doi chan In/Out (cuar Data), Mi chi can thay doi trong do thoi.
+Luu y: Dang de in/out cau truc giong nhau, neu khac nhau Mi phai tach ra thanh 2 cai record (HDL goi la record, giong struct)
